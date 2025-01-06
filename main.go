@@ -146,8 +146,8 @@ func (g *Game) Draw(screen *ebiten.Image) {
 		ebitenutil.DrawRect(screen,
 			float64(p.X*gridSize),
 			float64(p.Y*gridSize),
-			gridSize-1,
-			gridSize-1,
+			gridSize,
+			gridSize,
 			color.RGBA{0, 255, 0, 255})
 	}
 
@@ -173,7 +173,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 		y := bounds.Dy() / 2
 
 		// Draw game over text
-		ebitenutil.DebugPrint(screen, msg)
+		// ebitenutil.DebugPrint(screen, msg)
 
 		// Draw centered text at x, y position
 		ebitenutil.DebugPrintAt(screen, msg, x, y)
